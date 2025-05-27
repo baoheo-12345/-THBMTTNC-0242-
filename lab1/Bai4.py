@@ -1,5 +1,5 @@
-so=int(input("Nhập một số nguyên: "))
-if so % 2 == 0:
-    print(so,"Nó là số chăn")
-else:
-    print(so,"Nó là số lẽ")
+j=[]
+for i in range(2000,3201):
+    if ( i % 7 ) and ( i % 5 ):
+        j.append(str(i))
+print(",".join(j))

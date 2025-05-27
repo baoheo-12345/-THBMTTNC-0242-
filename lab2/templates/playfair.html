@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playfair Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Playfair Cipher</h2>
+
+    <!-- Mã hóa Playfair -->
+    <h4 style="color: blue;">ENCRYPTION</h4>
+    <form method="POST" action="/encrypt_playfair">
+        <div class="mb-3">
+            <label class="form-label">Plain text:</label>
+            <input type="text" class="form-control" name="inputPlainText" placeholder="Input Plain Text" required/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Key:</label>
+            <input type="text" class="form-control" name="inputKeyPlain" placeholder="Input Key" required/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Encrypt</button>
+    </form>
+
+    <!-- Hiển thị kết quả mã hóa -->
+    {% if encrypted_text %}
+    <div class="mt-4">
+        <h5>Encrypted text: </h5>
+        <p><strong>{{ encrypted_text }}</strong></p>
+    </div>
+    {% endif %}
+
+    <!-- Giải mã Playfair -->
+    <h4 style="color: blue;">DECRYPTION</h4>
+    <form method="POST" action="/decrypt_playfair">
+        <div class="mb-3">
+            <label class="form-label">Cipher text:</label>
+            <input type="text" class="form-control" name="inputCipherText" placeholder="Input Cipher Text" required/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Key:</label>
+            <input type="text" class="form-control" name="inputKeyCipher" placeholder="Input Key" required/>
+        </div>
+
+        <button type="submit" class="btn btn-success">Decrypt</button>
+    </form>
+
+    <!-- Hiển thị kết quả giải mã -->
+    {% if decrypted_text %}
+    <div class="mt-4">
+        <h5>Decrypted text: </h5>
+        <p><strong>{{ decrypted
