@@ -1,3 +1,5 @@
-ban_kinh = float(input("Nhập bán kinh: "))
-dien_tich = 3.14*(ban_kinh ** 2)
-print("Diện tích hình tròn là: ",dien_tich)
+so=int(input("Nhập một số nguyên: "))
+if so % 2 == 0:
+    print(so,"Nó là số chăn")
+else:
+    print(so,"Nó là số lẽ")

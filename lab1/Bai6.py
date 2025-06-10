@@ -1,6 +1,9 @@
-so_gio_lam = float(input("Nhập số giờ làm mỗi ngày: "))
-luong_gio = float(input("Nhập lương làm mỗi giơ: "))
-gio_tieu_chuan = 44
-gio_vuot_chuan = max(0,so_gio_lam - gio_tieu_chuan)
-thuc_linh = gio_tieu_chuan * luong_gio + gio_vuot_chuan * luong_gio * 1.5
-print(f"Số tiền thực lĩnh của nhân viên: {thuc_linh}")
+input_str = input("Nhập X,Y: ")
+dimensions = [int(x) for x in input_str.split(',')]
+rowNum = dimensions[0]
+colNum = dimensions[1]
+multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+for row in range(rowNum):
+    for col in range(colNum):
+        multilist[row][col] = row * col
+print(multilist)
