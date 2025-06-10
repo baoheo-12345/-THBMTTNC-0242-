@@ -15,7 +15,7 @@ def decode_image(encoded_image_path):
     message = ""
     for i in range(0, len(binary_message), 8):
         char = chr(int(binary_message[i:i+8], 2))
-        if char == '\xFE':  # Ký tự đánh dấu kết thúc (11111110)
+        if char == '\xFE':  # Ký tự đánh dấu kết thúc (11111110)git checkout main
             break
         message += char
 
